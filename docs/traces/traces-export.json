@@ -1,0 +1,468 @@
+{
+  "traces": [
+    {
+      "traceId": "40a61dec5a21c0e9ee662555dbb0db3b",
+      "rootSpanId": "e6749ea04f6c74b9",
+      "rootSpanName": "coordinator.delegate.broker",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:18:19.929384989Z",
+      "endTime": "2026-09-18T17:18:20.373517544Z",
+      "durationInNanos": 444132555,
+      "spanCount": 2,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "40a61dec5a21c0e9ee662555dbb0db3b",
+          "spanId": "e6749ea04f6c74b9",
+          "name": "coordinator.delegate.broker",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:18:19.929384989Z",
+          "endTime": "2026-09-18T17:18:20.373517544Z",
+          "durationInNanos": 444132555,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": true,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.derived": "records:read",
+            "agentid.scope.derived.count": 1,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        },
+        {
+          "traceId": "40a61dec5a21c0e9ee662555dbb0db3b",
+          "spanId": "01830a4bf78d483e",
+          "parentSpanId": "e6749ea04f6c74b9",
+          "name": "broker.delegate",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:18:19.985156848Z",
+          "endTime": "2026-09-18T17:18:20.371724543Z",
+          "durationInNanos": 386567695,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": true,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.derived": "records:read",
+            "agentid.scope.derived.count": 1,
+            "agentid.scope.original": "records:read records:write records:list",
+            "agentid.scope.original.count": 3,
+            "agentid.specialist.status": 200,
+            "agentid.subject": "coordinator-agent",
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "agentid-scope-broker",
+            "telemetry.sdk.language": "go",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.46.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "70eddc4eca0eace603bd580404363887",
+      "rootSpanId": "2e5ea3a84f010f7e",
+      "rootSpanName": "coordinator.delegate.baseline",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:18:05.156660301Z",
+      "endTime": "2026-09-18T17:18:05.318715346Z",
+      "durationInNanos": 162055045,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "70eddc4eca0eace603bd580404363887",
+          "spanId": "2e5ea3a84f010f7e",
+          "name": "coordinator.delegate.baseline",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:18:05.156660301Z",
+          "endTime": "2026-09-18T17:18:05.318715346Z",
+          "durationInNanos": 162055045,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": false,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "122cf92511d81a9724aa38ca60492990",
+      "rootSpanId": "1e8d734f39ed839e",
+      "rootSpanName": "broker.delegate",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:13:23.451591004Z",
+      "endTime": "2026-09-18T17:13:23.760008062Z",
+      "durationInNanos": 308417058,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "122cf92511d81a9724aa38ca60492990",
+          "spanId": "1e8d734f39ed839e",
+          "name": "broker.delegate",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:13:23.451591004Z",
+          "endTime": "2026-09-18T17:13:23.760008062Z",
+          "durationInNanos": 308417058,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": true,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.derived": "records:read",
+            "agentid.scope.derived.count": 1,
+            "agentid.scope.original": "records:list records:read records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.specialist.status": 200,
+            "agentid.subject": "coordinator-agent",
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "agentid-scope-broker",
+            "telemetry.sdk.language": "go",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.46.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "3a31dffa9a0a7a5b5241af810ec8f27f",
+      "rootSpanId": "b21c2ea222f385fb",
+      "rootSpanName": "coordinator.delegate.broker",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:13:23.407494231Z",
+      "endTime": "2026-09-18T17:13:23.762227074Z",
+      "durationInNanos": 354732843,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "3a31dffa9a0a7a5b5241af810ec8f27f",
+          "spanId": "b21c2ea222f385fb",
+          "name": "coordinator.delegate.broker",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:13:23.407494231Z",
+          "endTime": "2026-09-18T17:13:23.762227074Z",
+          "durationInNanos": 354732843,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": true,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.derived": "records:read",
+            "agentid.scope.derived.count": 1,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "dfe00460704cf01b209f6c1ba408ecbe",
+      "rootSpanId": "f5df72e3f76fd426",
+      "rootSpanName": "coordinator.delegate.baseline",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:13:08.873445532Z",
+      "endTime": "2026-09-18T17:13:08.953163336Z",
+      "durationInNanos": 79717804,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "dfe00460704cf01b209f6c1ba408ecbe",
+          "spanId": "f5df72e3f76fd426",
+          "name": "coordinator.delegate.baseline",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:13:08.873445532Z",
+          "endTime": "2026-09-18T17:13:08.953163336Z",
+          "durationInNanos": 79717804,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": false,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "9f4dd86fd9858da12d847ab43e92e740",
+      "rootSpanId": "233b1d71062a0947",
+      "rootSpanName": "coordinator.delegate.broker",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:11:16.23810969Z",
+      "endTime": "2026-09-18T17:11:16.316514675Z",
+      "durationInNanos": 78404985,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 1
+      },
+      "spans": [
+        {
+          "traceId": "9f4dd86fd9858da12d847ab43e92e740",
+          "spanId": "233b1d71062a0947",
+          "name": "coordinator.delegate.broker",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:11:16.23810969Z",
+          "endTime": "2026-09-18T17:11:16.316514675Z",
+          "durationInNanos": 78404985,
+          "status": "error",
+          "attributes": {
+            "agentid.broker.enabled": true,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "traceId": "0e79634c1f540f721edaf1435b1d6dc5",
+      "rootSpanId": "4832a85975cd6c10",
+      "rootSpanName": "coordinator.delegate.baseline",
+      "rootSpanKind": "unknown",
+      "startTime": "2026-09-18T17:11:01.636090678Z",
+      "endTime": "2026-09-18T17:11:01.763371021Z",
+      "durationInNanos": 127280343,
+      "spanCount": 1,
+      "status": {
+        "errorCount": 0
+      },
+      "spans": [
+        {
+          "traceId": "0e79634c1f540f721edaf1435b1d6dc5",
+          "spanId": "4832a85975cd6c10",
+          "name": "coordinator.delegate.baseline",
+          "service": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+          "startTime": "2026-09-18T17:11:01.636090678Z",
+          "endTime": "2026-09-18T17:11:01.763371021Z",
+          "durationInNanos": 127280343,
+          "status": "unset",
+          "attributes": {
+            "agentid.broker.enabled": false,
+            "agentid.capability": "records.summarise",
+            "agentid.delegation.depth": 0,
+            "agentid.scope.original": "records:read records:list records:write",
+            "agentid.scope.original.count": 3,
+            "agentid.task": "summarise record 42 for the support ticket",
+            "data_stream": {
+              "dataset": "default",
+              "namespace": "namespace",
+              "type": "span"
+            }
+          },
+          "resource": {
+            "k8s.deployment.name": "api-platform-default-default-gateway-gateway-runtime",
+            "k8s.namespace.name": "openchoreo-data-plane",
+            "k8s.node.name": "k3d-amp-local-server-0",
+            "k8s.pod.name": "api-platform-default-default-gateway-gateway-runtime-665c577nsm",
+            "k8s.pod.uid": "6d0edaec-5078-4c8f-893a-d35b11f88af8",
+            "openchoreo.dev/component-uid": "08872ccf-c97c-4121-90b4-c81cdff499f4",
+            "openchoreo.dev/environment-uid": "2c477d9d-cff5-4959-afb1-4221eedf421d",
+            "openchoreo.dev/project-uid": "dba00e22-92cd-45ab-b8ed-d840deb23ded",
+            "service.name": "coordinator",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.29.0"
+          },
+          "ampAttributes": {
+            "kind": "unknown",
+            "status": {
+              "error": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "totalCount": 7,
+  "truncated": false
+}

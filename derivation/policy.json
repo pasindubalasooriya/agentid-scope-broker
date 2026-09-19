@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "resource": "https://specialist.agentid.local",
+  "maxDepth": 3,
+  "capabilities": {
+    "records.read": {
+      "description": "Read a single record the coordinator names.",
+      "scopes": [
+        "records:read",
+        { "name": "records:list", "maxDepth": 1 }
+      ]
+    },
+    "records.write": {
+      "description": "Create or update a record. Never delegated onward.",
+      "maxDepth": 1,
+      "scopes": [
+        "records:write"
+      ]
+    },
+    "records.summarise": {
+      "description": "Read a record and return a summary. Read authority only.",
+      "scopes": [
+        "records:read"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.run/
+.env.demo
+broker.exe
+bin/
+
+# credentials, never committed
+.env.trace
