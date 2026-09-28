@@ -127,6 +127,24 @@ func (b *Broker) handleDelegate(w http.ResponseWriter, r *http.Request) {
 	span.SetInt(AttrScopeOriginalCount, len(original))
 	span.SetString(AttrSubject, claims.Subject)
 
+	// A verified token with no scope claim holds no authority, so it has none to
+	// delegate. The derivation library treats an empty Available as "nothing to
+	// intersect against" and returns the capability's full declared set, which
+	// is the right call for a library that cannot know whether the caller simply
+	// did not supply it. In the broker the empty case is never ambiguous, so the
+	// guard belongs here.
+	//
+	// This is not hypothetical. ThunderID answers an over-requested exchange
+	// with 200 and no scope field at all, the silent drop the read-back guard in
+	// thunder.go exists to catch. Such a token is well formed and verifies, so
+	// without this check a token carrying no authority would derive full
+	// capability authority on its next hop.
+	if len(original) == 0 {
+		b.fail(w, span, http.StatusForbidden, "insufficient_scope",
+			"subject token carries no scope claim, so it holds no authority to delegate")
+		return
+	}
+
 	// 3. Derive the narrowed set.
 	result, err := derivation.Derive(derivation.DelegationContext{
 		Task:       req.Task,

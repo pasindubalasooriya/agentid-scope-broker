@@ -359,6 +359,17 @@ func TestDelegateRejections(t *testing.T) {
 			wantCode:   "insufficient_scope",
 		},
 		{
+			// A token that lost its scopes to Thunder's silent drop still
+			// verifies cleanly. Without this guard it would derive the
+			// capability's full declared set, because the derivation library
+			// has nothing to intersect against.
+			name:       "scopeless token cannot delegate",
+			token:      func(h *harness) string { return h.mintToken(nil, time.Hour) },
+			body:       map[string]any{"capability": "records.read"},
+			wantStatus: http.StatusForbidden,
+			wantCode:   "insufficient_scope",
+		},
+		{
 			name:       "missing capability",
 			token:      func(h *harness) string { return h.mintToken(wideScopes, time.Hour) },
 			body:       map[string]any{"task": "do something"},
